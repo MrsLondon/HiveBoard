@@ -5,8 +5,8 @@ function Navbar() {
     return (
       <nav className="Navbar">
         <div className="logo">
-          <img src="src/assets/hive.jpg" alt="App Logo" />
-          <span className="app-name">Your App Name</span>
+          <img src="src/assets/hive.png" alt="App Logo" />
+          <span className="app-name">Hive Board</span>
         </div>
         <ul>
             <li><Link to={"/home"}>Home</Link></li>

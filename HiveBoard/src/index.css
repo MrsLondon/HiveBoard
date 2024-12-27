@@ -25,6 +25,7 @@ code {
 .Navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Center vertically */
   background: #352275;
   padding: 5px 20px;
 }
@@ -39,10 +40,6 @@ code {
   color: white;
 }
 
-.Navbar .logo-img {
-  width: 10px; /* adjust as needed */
-  height: auto; /* keep the aspect ratio */
-}
 
 /* index.css */
 @tailwind base;
