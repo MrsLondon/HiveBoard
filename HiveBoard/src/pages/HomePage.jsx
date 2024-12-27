@@ -1,14 +1,19 @@
-// src/pages/HomePage.jsx
+import { Link } from "react-router-dom";
+import kanban from "../kanban.json"; // Correct relative path
 
-const imgURL = "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/react-routing/home.gif";
-
-function HomePage() {
+const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
-      <img src={imgURL} alt="home gif" className="page-img" />
+      <h1>Kanban Board</h1>
+      <ul>
+        {kanban.map((task) => (
+          <li key={task.id}>
+            <Link to={`/users/${task.id}`}>{task.title}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
 
-export default HomePage;
+export default Home;
