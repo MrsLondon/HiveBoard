@@ -39,6 +39,10 @@ code {
   color: white;
 }
 
+.Navbar .logo-img {
+  width: 10px; /* adjust as needed */
+  height: auto; /* keep the aspect ratio */
+}
 
 /* index.css */
 @tailwind base;
