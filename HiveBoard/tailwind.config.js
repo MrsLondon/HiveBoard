@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
   content: [
     "./index.html",  // Make sure this is in your content array
@@ -8,5 +8,4 @@ export default {
     extend: {},
   },
   plugins: [],
-}
-
+};
