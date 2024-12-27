@@ -1,24 +1,22 @@
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar.jsx';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
 import HomePage from './pages/HomePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
-import LandingPage from './pages/LandingPage.jsx'
-import './App.css'
+import LandingPage from './pages/LandingPage.jsx';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <Navbar/>
+    <div className="App">
+      <Layout>
         <Routes>
-        <Route path="/" element={<LandingPage />} /> 
-        <Route path="/home" element={<HomePage />} /> 
-          <Route path="*" element={<ErrorPage/>} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
-      </div>
-        
-    </>
+      </Layout>
+    </div>
   );
 }
 
-export default App
+export default App;
