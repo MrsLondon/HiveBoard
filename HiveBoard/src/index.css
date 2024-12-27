@@ -40,7 +40,9 @@ code {
   color: white;
 }
 
-
+.Navbar .app-name {
+  color: white; /* Makes the text white */
+}
 /* index.css */
 @tailwind base;
 @tailwind components;
