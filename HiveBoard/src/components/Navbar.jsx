@@ -1,14 +1,15 @@
-// src/pages/HomePage.jsx
+// src/components/Navbar.jsx
+import { Link } from "react-router-dom";
+function Navbar() {
+    return (
+      <nav className="Navbar">
+        <ul>
+            <li><Link to={"/home"}>Home</Link></li>
+        </ul>
+      </nav>
+    );
+  }
+  
+  export default Navbar;
+  
 
-const imgURL = "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/react-routing/home.gif";
-
-function HomePage() {
-  return (
-    <div>
-      <h1>Home</h1>
-      <img src={imgURL} alt="home gif" className="page-img" />
-    </div>
-  );
-}
-
-export default HomePage;
