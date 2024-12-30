@@ -7,7 +7,7 @@
 
 /* For controlling the image size directly */
 .logo img {
-  width: 70px;  /* adjust to desired size */
+  width: 200px;  /* adjust to desired size */
   height: auto;
 }
 
