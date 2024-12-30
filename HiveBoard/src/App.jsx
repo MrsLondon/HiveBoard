@@ -2,8 +2,11 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
-import LandingPage from './pages/LandingPage.jsx'
-import './App.css'
+import LandingPage from './pages/LandingPage.jsx';
+import Footer from './components/Footer.jsx';
+import './App.css';
+
+import { FaGithub } from 'react-icons/fa';
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
         <Route path="/home" element={<HomePage />} /> 
           <Route path="*" element={<ErrorPage/>} />
         </Routes>
+        <Footer/>
       </div>
         
     </>

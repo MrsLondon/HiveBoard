@@ -1,5 +1,6 @@
 
-import "./LandingPage.css"; // Import custom styles
+import "../styles/LandingPage.css"; // Import custom styles
+
 
 const LandingPage = () => {
   return (
