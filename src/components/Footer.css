@@ -1,0 +1,42 @@
+
+
+
+/* Footer.css */
+
+/* Style for the footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the link */
+.footer .link {
+    color: #0366d6;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Hover effect for the link */
+.footer .link:hover {
+    text-decoration: underline;
+}
+
+/* Style for the GitHub icon */
+.footer .icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: #333;
+}
+
+/* Hover effect for the icon */
+.footer .link:hover .icon {
+    color: #0366d6;
+}
