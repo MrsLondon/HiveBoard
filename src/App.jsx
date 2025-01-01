@@ -1,9 +1,9 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
-
-import LandingPage from './pages/LandingPage.jsx'
+import Sidebar from './components/Sidebar.jsx';
+import LandingPage from './pages/LandingPage.jsx';
 import Footer from './components/Footer.jsx';
 
 import './App.css'
@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         
         <Navbar/>
-        <Sidebar />
+        <Sidebar/>
         <Routes>
         <Route path="/" element={<LandingPage />} /> 
         <Route path="/home" element={<HomePage />} /> 
