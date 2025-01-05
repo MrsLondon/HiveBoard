@@ -1,5 +1,6 @@
 # HiveBoard
 
+
 HiveBoard is a modern and intuitive Kanban board application designed to simplify task management, improve collaboration, and help individuals or teams stay organized.
 
 ## Features
@@ -83,27 +84,4 @@ Contributions are welcome! To contribute:
 For questions or suggestions, feel free to reach out:
 
 - **GitHub:** [MrsLondon](https://github.com/MrsLondon)
-- **LinkedIn:** [Ayat Abu Haj](https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit)
-
-<details>
-  <summary>
-    <h2>Learning Goals</h2>
-  </summary>
-
-  This project allows you to practice and apply the concepts and techniques related to building a task management application.
-
-  Upon completion, you will be able to:
-
-  - Manage and display tasks in a Kanban board interface
-  - Implement drag-and-drop functionality for task organization
-  - Use React, Vite, and state management for an efficient workflow
-  - Create responsive layouts for different devices
-
-  <br>
-  <hr> 
-
-</details>
-
-## Introduction
-
-This project focuses on creating a Kanban board where users can easily organize their tasks, collaborate, and manage projects efficiently. By completing this project, you will enhance your React development skills while working with important frontend technologies.
+- **LinkedIn:** [Ayat Abu Haj]
