@@ -1,4 +1,4 @@
-HiveBoard
+
 
 HiveBoard is a modern and intuitive Kanban board application designed to simplify task management, improve collaboration, and help individuals or teams stay organized.
 
