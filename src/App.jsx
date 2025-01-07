@@ -37,8 +37,10 @@ function App() {
         
         <BoardContext.Provider value={{allboard,setAllBoard}}>
         <div className='content flex'>
-        {location.pathname === '/home' && <HomeSidebar />}
-        <BoardManager></BoardManager>
+        {location.pathname === '/home' && <HomeSidebar/> }
+        {location.pathname === '/home' && <BoardManager/> }
+        
+  
       </div>
         </BoardContext.Provider>
         <Routes>
