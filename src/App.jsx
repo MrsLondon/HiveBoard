@@ -1,7 +1,5 @@
-
 import { useState } from 'react';
-
-/* import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
@@ -36,7 +34,6 @@ function App() {
       <div className="App">
         
         <Navbar/>
-
         
         <BoardContext.Provider value={{allboard,setAllBoard}}>
         <div className='content flex'>
@@ -45,7 +42,6 @@ function App() {
       </div>
         </BoardContext.Provider>
         <Routes>
-
         <Route path="/" element={<LandingPage />} /> 
         <Route path="/home" element={<HomePage />} /> 
           <Route path="*" element={<ErrorPage/>} />
@@ -57,8 +53,20 @@ function App() {
   );
 }
 
+export default App
 
-export default App */
+
+
+
+
+
+
+
+
+
+
+/*
+export default App 
 import Footer from "./components/Footer.jsx";
 import React from "react";
 import {
@@ -111,9 +119,9 @@ const App = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="*" element={<ErrorPage />} />
-        </Routes> */}
+        </Routes> }
 
-        {/* Main Content */}
+   
         <Box
           component="main"
           sx={{
@@ -135,4 +143,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;*/
