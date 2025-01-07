@@ -39,8 +39,7 @@ function App() {
         <div className='content flex'>
         {location.pathname === '/home' && <HomeSidebar/> }
         {location.pathname === '/home' && <BoardManager/> }
-        
-  
+    
       </div>
         </BoardContext.Provider>
         <Routes>

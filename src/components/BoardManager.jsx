@@ -7,7 +7,7 @@ import AddList from './AddList';
 
 
 const BoardManager = () => {
-      const { allboard, setAllBoard } = useContext(BoardContext);
+    const { allboard, setAllBoard } = useContext(BoardContext);
 
     const activeBoard = allboard.boards[allboard.active];
 
