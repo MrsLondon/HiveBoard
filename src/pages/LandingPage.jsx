@@ -1,42 +1,10 @@
-
-import "../style/LandingPage.css"; 
-
 const LandingPage = () => {
   return (
-    <div className="landing-page">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Welcome to HiveBoard</h1>
-          <p>Your ultimate productivity tool to manage tasks effortlessly.</p>
-          <button className="cta-button">Get Started</button>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="features">
-        <h2>Features</h2>
-        <div className="features-container">
-          <div className="feature-item">
-            <h3>Task Management</h3>
-            <p>Organize your tasks and stay on top of deadlines.</p>
-          </div>
-          <div className="feature-item">
-            <h3>Collaborate</h3>
-            <p>Work with your team in real-time.</p>
-          </div>
-          <div className="feature-item">
-            <h3>Track Progress</h3>
-            <p>Monitor your progress and achieve goals faster.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="cta">
-        <h2>Ready to boost your productivity?</h2>
-        <button className="cta-button">Sign Up Now</button>
-      </section>
+    <div className="min-h-screen flex flex-col justify-between bg-gray-100">
+      {/* Navbar Placeholder */}
+      <header className="bg-blue-500 text-white p-4">
+      </header>
+      
     </div>
   );
 };

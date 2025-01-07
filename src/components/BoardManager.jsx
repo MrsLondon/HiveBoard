@@ -3,10 +3,26 @@ import { MoreHorizontal, UserPlus, Edit2 } from 'react-feather';
 import AddCard from './AddCard';
 import { BoardContext } from '../context/BoardContext';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
+import { useState } from 'react';
 import AddList from './AddList';
 
 const BoardManager = () => {
-    const { allboard, setAllBoard } = useContext(BoardContext);
+    const boardData = {
+        active:0,
+        boards:[
+          {
+            //name:'To do list',
+            //bgcolor:'#069',
+            list:[
+              {id:"1",title:"To do",items:[{id:"cdrFt",title:"Project Description 1"}]},
+              {id:"2",title:"In Progress",items:[{id:"cdrFv",title:"Project Description 2"}]},
+              {id:"3",title:"Done",items:[{id:"cdrFb",title:"Project Description 3"}]}
+            ]
+          }
+        ]
+      }
+      const [allboard,setAllBoard] = useState(boardData); 
+
     const activeBoard = allboard.boards[allboard.active];
 
     // Handles the drag-and-drop functionality
