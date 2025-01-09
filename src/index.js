@@ -4,12 +4,15 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline"; // Optional: Normalizes styles
 import App from "./App";
 import theme from "./theme"; // Import your theme
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline /> {/* Optional: Adds baseline styles */}
-      <App />
+      <BrowserRouter>
+          <App />
+      </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
