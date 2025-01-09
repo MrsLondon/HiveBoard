@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+body{
+  background: white;
+  color: white;
+  font-size: 14px;
+}
+
 /* For controlling the image size directly */
 .logo img {
   width: 200px;  /* adjust to desired size */
