@@ -1,40 +1,54 @@
-import React, { useContext } from "react";
-import { MoreHorizontal, UserPlus, Edit2 } from "react-feather";
-import AddCard from "./AddCard";
-import { BoardContext } from "../context/BoardContext";
+import React, { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { useState } from "react";
+import { UserPlus, MoreHorizontal, Edit2 } from "react-feather";
+import AddCard from "./AddCard";
 import AddList from "./AddList";
 import Utils from "../utils/Utils";
-const BoardManager = () => {
-  const boardData = {
-    active: 0,
-    boards: [
-      {
-        //name:'To do list',
-        //bgcolor:'#069',
-        list: [
-          {
-            id: "1",
-            title: "To do",
-            items: [{ id: "cdrFt", title: "Project Description 1" }],
-          },
-          {
-            id: "2",
-            title: "In Progress",
-            items: [{ id: "cdrFv", title: "Project Description 2" }],
-          },
-          {
-            id: "3",
-            title: "Done",
-            items: [{ id: "cdrFb", title: "Project Description 3" }],
-          },
-        ],
-      },
-    ],
-  };
-  const [allboard, setAllBoard] = useState(boardData);
+import kanbanData from "../kanban.json"; 
 
+const BoardManager = () => {
+  // Your task data (you might import this from a JSON file)
+
+  // Initialize board state with categorized lists
+  const [allboard, setAllBoard] = useState(() => {
+    const categorizedLists = {
+      "To Do": [],
+      "In Progress": [],
+      "Done": [],
+    };
+
+    kanbanData.forEach(task => {
+      categorizedLists[task.status].push({
+        id: task.id,
+        title: task.title,
+      });
+    });
+
+    return {
+      active: 0,
+      boards: [
+        {
+          list: [
+            {
+              id: "1",
+              title: "To Do",
+              items: categorizedLists["To Do"],
+            },
+            {
+              id: "2",
+              title: "In Progress",
+              items: categorizedLists["In Progress"],
+            },
+            {
+              id: "3",
+              title: "Done",
+              items: categorizedLists["Done"],
+            },
+          ],
+        },
+      ],
+    };
+  });
 
   const activeBoard = allboard.boards[allboard.active];
 
@@ -44,18 +58,13 @@ const BoardManager = () => {
       console.log("No destination selected.");
       return;
     }
+
     const updatedLists = [...activeBoard.list];
     const sourceListIndex = parseInt(result.source.droppableId);
     const destinationListIndex = parseInt(result.destination.droppableId);
-    const [movedItem] = updatedLists[sourceListIndex - 1].items.splice(
-      result.source.index,
-      1
-    );
-    updatedLists[destinationListIndex - 1].items.splice(
-      result.destination.index,
-      0,
-      movedItem
-    );
+
+    const [movedItem] = updatedLists[sourceListIndex - 1].items.splice(result.source.index, 1);
+    updatedLists[destinationListIndex - 1].items.splice(result.destination.index, 0, movedItem);
 
     const updatedBoard = { ...allboard };
     updatedBoard.boards[updatedBoard.active].list = updatedLists;
