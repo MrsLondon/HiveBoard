@@ -9,7 +9,7 @@ const HiveBoardLandingPage = () => {
           {/* Text Content */}
           <div className="flex flex-1 flex-col items-center lg:items-start">
             <h2 className="text-hive-yellow text-4xl md:text-5xl lg:text-6xl text-center lg:text-left mb-6 font-bold">
-              Welcome to HiveBoard
+              𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 ℍ𝕚𝕧𝕖 𝔹𝕠𝕒𝕣𝕕
             </h2>
             <p className="text-hive-gray text-lg text-center lg:text-left mb-6">
               A dynamic space to organize your tasks, collaborate seamlessly,
@@ -18,15 +18,17 @@ const HiveBoardLandingPage = () => {
             <div className="flex justify-center flex-wrap gap-6">
               <button
                 type="button"
-                className="btn btn-yellow hover:bg-hive-darkyellow"
+                className="btn font-bold hover:bg-hive-darkyellow 
+                bg-purple-500 flex p-1 justify-start rounded items-center mt-1 hover:bg-gray-500 h-8"
               >
                 Get Started
               </button>
               <button
                 type="button"
-                className="btn btn-outline hover:text-hive-yellow hover:border-hive-yellow"
+                className="btn font-bold hover:bg-hive-darkyellow 
+                bg-purple-500 flex p-1 justify-start rounded items-center mt-1 hover:bg-gray-500 h-8"
               >
-                Learn More
+                Sign up for free
               </button>
             </div>
           </div>

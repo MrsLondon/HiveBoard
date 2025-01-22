@@ -49,7 +49,7 @@ const HomeSidebar = () => {
       )}
       {!collapsed && (
         <div>
-          <div className="workspace p-3 flex justify-between border-b border-b-[#1a263429]">
+          <div className="workspace p-3 flex justify-between border-b border-b-[#1a263429] font-bold">
             <h4>My Workspace</h4>
             <button
               onClick={() => setCollapsed(!collapsed)}
@@ -67,7 +67,7 @@ const HomeSidebar = () => {
                 align="start"
                 positions={["right", "top", "bottom", "left"]} // preferred positions by priority
                 content={
-                  <div className="ml-2 p-2 w-60 flex flex-col justify-center items-center bg-slate-600 text-white rounded">
+                  <div className="ml-2 p-2 w-60 flex flex-col justify-center items-center bg-slate-600 text-white rounded bg-purple-500">
                     <button
                       onClick={() => setShowpop(!showpop)}
                       className="absolute right-2 top-2 hover:bg-gray-500 p-1 rounded"
@@ -86,7 +86,7 @@ const HomeSidebar = () => {
                           setBoarddata({ ...boardData, name: e.target.value })
                         }
                         type="text"
-                        className="mb-2 h-8 px-2 w-full bg-gray-700"
+                        className="mb-2 h-8 px-2 w-full bg-purple-300"
                       />
                       <label htmlFor="Color">Board Color</label>
                       <input
@@ -98,11 +98,11 @@ const HomeSidebar = () => {
                           })
                         }
                         type="color"
-                        className="mb-2 h-8 px-2 w-full bg-gray-700"
+                        className="mb-2 h-8 px-2 w-full bg-purple-300"
                       />
                       <button
                         onClick={() => addBoard()}
-                        className="w-full rounded h-8 bg-slate-700 mt-2 hover:bg-gray-500"
+                        className="bg-purple-300 w-full rounded h-8 bg-slate-700 mt-2 hover:bg-gray-500"
                       >
                         Create
                       </button>

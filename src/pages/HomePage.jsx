@@ -41,6 +41,7 @@ const Home = () => {
         <div className="content flex min-h-screen">
           <HomeSidebar />
           <BoardManager />
+          <Footer />
         </div>
       </BoardContext.Provider>
     </div>

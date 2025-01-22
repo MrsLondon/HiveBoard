@@ -8,7 +8,7 @@ function Navbar() {
       {/* Logo Section */}
       <div className="flex items-center space-x-3">
         <img src="src/assets/logo.png" alt="App Logo" className="w-10 auto" />
-        <span className="text-2xl  font-semibold text-yellow-500">
+        <span className="text-2xl  font-semibold text-yellow-500 font-bold">
           𝐻𝒾𝓋𝑒 𝐵𝑜𝒶𝓇𝒹
         </span>
       </div>
@@ -30,7 +30,7 @@ function Navbar() {
         {/* Always show User Icon on Home page */}
         {location.pathname === "/home" && (
           <div className="flex items-center space-x-4">
-            <span className="text-sm font-medium text-yellow-500">𝓐𝔂𝓪𝓽</span>
+            <span className="font-medium text-yellow-500 font-bold">𝓐𝔂𝓪𝓽</span>
             <img
               className="w-8 h-8 rounded-full border border-gray-400"
               src="https://placehold.co/28x28/png"
