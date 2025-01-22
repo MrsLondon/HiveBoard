@@ -5,7 +5,7 @@ import AddCard from "./AddCard";
 import AddList from "./AddList";
 import Utils from "../utils/Utils";
 import kanbanData from "../kanban.json";
-
+//and this 
 const BoardManager = () => {
   // Your task data (you might import this from a JSON file)
 
