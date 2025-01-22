@@ -88,4 +88,6 @@ body {
     background-color: #ff6f61;
     padding: 15px 30px;
   }
-  
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;

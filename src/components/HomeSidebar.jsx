@@ -33,7 +33,7 @@ const HomeSidebar = () => {
   };
   return (
     <div
-      className={`bg-[#7e93b1] h-[calc(100vh-3rem)] border-r border-r-[rgba(73,117,139,0.16)] transition-all linear duration-500 flex-shrink-0 ${
+      className={`bg-purple-300 border-r border-r-[rgba(73,117,139,0.16)] transition-all linear duration-500 flex-shrink-0 ${
         collapsed ? "w-[42px]" : "w-[280px]"
       }`}
     >

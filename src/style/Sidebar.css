@@ -38,3 +38,6 @@
   .menu-item:hover {
     background-color: #383850;
   }
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;

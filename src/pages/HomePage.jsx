@@ -36,9 +36,9 @@ const Home = () => {
   const [allboard, setAllBoard] = useState(kanabanDate);
 
   return (
-    <div>
+    <div className=" min-h-screen flex flex-col justify-between">
       <BoardContext.Provider value={{ allboard, setAllBoard }}>
-        <div className="content flex">
+        <div className="content flex min-h-screen">
           <HomeSidebar />
           <BoardManager />
         </div>

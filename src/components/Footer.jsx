@@ -1,42 +1,24 @@
-import "../style/Footer.css";
 import React from "react";
-import { Typography, IconButton, Tooltip, Box } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {
-  const drawerWidth = 240;
   return (
-    /* Footer */
-    <Box
-      component="footer"
-      sx={{
-        bgcolor: "primary.main",
-        color: "black",
-        textAlign: "center",
-        p: 2,
-        position: "fixed",
-        bottom: 0,
-        left: drawerWidth,
-        marginTop: 2,
-        width: `calc(100% - ${drawerWidth}px)`,
-      }}
-    >
-      <Tooltip title="Visit GitHub Repository">
-        <IconButton
-          component="a"
+    <div className="bg-purple-700 w-full h-12 flex justify-center items-center">
+      <div className="flex items-center space-x-2 text-slate-50">
+        <p className="text-sm">Made with ❤️ by</p>
+        <a
           href="https://github.com/MrsLondon/HiveBoard"
           target="_blank"
           rel="noopener noreferrer"
-          color="secondary.main"
-          aria-label="GitHub repository"
+          className="flex items-center"
         >
-          <GitHubIcon fontSize="large" />
-
-          <Typography variant="body1">Visit GitHub Repository</Typography>
-        </IconButton>
-      </Tooltip>
-    </Box>
+          <img
+            className="w-8 h-8 rounded-full border border-slate-300"
+            src="https://avatars.githubusercontent.com/u/9919?v=4"
+            alt="GitHub Avatar"
+          />
+        </a>
+      </div>
+    </div>
   );
 };
-
 export default Footer;
