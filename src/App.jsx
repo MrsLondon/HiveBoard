@@ -4,9 +4,10 @@ import HomePage from "./pages/HomePage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
 import Footer from "./components/Footer.jsx";
-import { BoardContext } from "./context/BoardContext";
-import kanbanData from "./kanban.json";
-import React, { useState } from "react";
+import { Draggable, Droppable } from "react-beautiful-dnd";
+import BoardManager from "./components/BoardManager.jsx";
+import Header from "./components/Header.jsx";
+import AboutPage from "./pages/AboutPage.jsx"
 
 function App() {
   // Initialize board state with categorized lists
@@ -58,8 +59,10 @@ function App() {
 
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="home" element={<HomePage />} />
           <Route path="*" element={<ErrorPage />} />
+          
         </Routes>
       </div>
     </BoardContext.Provider>

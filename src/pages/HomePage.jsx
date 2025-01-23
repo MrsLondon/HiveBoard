@@ -5,7 +5,7 @@ import BoardManager from "../components/BoardManager";
 import { BoardContext } from "../context/BoardContext";
 import kanabanDate from "../kanban.json";
 import Header from "../components/Header";
-
+//this part 
 const Home = () => {
   const boardData = {
     active: 0,
