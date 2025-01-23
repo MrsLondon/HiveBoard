@@ -2,7 +2,7 @@ const AboutPage = () => {
   return (
     <div className="about-page bg-gray-100 min-h-screen">
       {/* Hero Section */}
-      <section className="hero bg-gradient-to-r from-blue-500 to-purple-500 text-white py-16 text-center">
+      <section className="hero bg-gradient-to-r  from-purple-700 to-yellow-500 text-white py-16  py-16 text-center">
         <h1 className="text-4xl font-bold mb-4">About HiveBoard</h1>
         <p className="text-lg max-w-2xl mx-auto">
           Effortless Task Management for Productivity Seekers
