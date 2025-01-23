@@ -5,7 +5,8 @@ import BoardManager from "../components/BoardManager";
 import { BoardContext } from "../context/BoardContext";
 import kanabanDate from "../kanban.json";
 import Header from "../components/Header";
-//this part 
+import Footer from "../components/Footer";
+//this part
 const Home = () => {
   const boardData = {
     active: 0,
@@ -41,9 +42,9 @@ const Home = () => {
         <div className="content flex min-h-screen">
           <HomeSidebar />
           <BoardManager />
-          <Footer />
         </div>
       </BoardContext.Provider>
+      <Footer />
     </div>
   );
 };

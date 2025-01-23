@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HiveBoardLandingPage = () => {
+const LandingPage = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-gray-50 font-Poppins">
       {/* Hero Section */}
@@ -10,14 +10,13 @@ const HiveBoardLandingPage = () => {
           {/* Text Content */}
           <div className="flex flex-1 flex-col items-center lg:items-start">
             <h2 className="text-hive-yellow text-4xl md:text-5xl lg:text-6xl text-center lg:text-left mb-6 font-bold">
-              𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 ℍ𝕚𝕧𝕖 𝔹𝕠𝕒𝕣𝕕
+              Welcome to HiveBoard
             </h2>
             <p className="text-hive-gray text-lg text-center lg:text-left mb-6">
               A dynamic space to organize your tasks, collaborate seamlessly,
               and achieve your goals. Your ideas deserve the Hive treatment.
             </p>
             <div className="flex justify-center flex-wrap gap-6">
-
               {/* Get Started Button */}
               <Link
                 to="/home"
@@ -31,7 +30,7 @@ const HiveBoardLandingPage = () => {
                 className="btn btn-outline hover:text-hive-yellow hover:border-hive-yellow border border-gray-400 py-3 px-6 rounded-md text-lg font-bold"
               >
                 Learn More
-
+              </Link>
             </div>
           </div>
           {/* Hero Image */}
@@ -110,4 +109,4 @@ const HiveBoardLandingPage = () => {
   );
 };
 
-export default HiveBoardLandingPage;
+export default LandingPage;

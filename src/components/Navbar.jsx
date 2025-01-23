@@ -7,15 +7,13 @@ function Navbar() {
     <nav className="bg-purple-700 text-white px-6 py-4 flex justify-between items-center">
       {/* Logo Section */}
       <div className="flex items-center space-x-3">
-
         <Link to="/">
           <img
             src="src/assets/logo2.png"
             alt="App Logo"
-            className="w-28 h-auto cursor-pointer" // Added cursor-pointer for better UX
+            className="w-35 h-20 cursor-pointer" // Added cursor-pointer for better UX
           />
         </Link>
-
       </div>
 
       {/* Navigation Links */}
