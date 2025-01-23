@@ -5,7 +5,8 @@ import AddCard from "./AddCard";
 import AddList from "./AddList";
 import Utils from "../utils/Utils";
 import kanbanData from "../kanban.json";
-//and this 
+import TaskDetail from "./TaskDetail";
+
 const BoardManager = () => {
   // Your task data (you might import this from a JSON file)
 
@@ -21,9 +22,14 @@ const BoardManager = () => {
       categorizedLists[task.status].push({
         id: task.id,
         title: task.title,
+        description: task.description,
+        assignee: task.assignee,
+        status: task.status,
+        priority: task.priority,
+        createdDate: task.createdDate,
+        dueDate: task.dueDate,
       });
     });
-
     return {
       active: 0,
       boards: [
@@ -51,6 +57,8 @@ const BoardManager = () => {
   });
 
   const activeBoard = allboard.boards[allboard.active];
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedTask, setSelectedTask] = useState(null);
 
   // Handles the drag-and-drop functionality
   const handleDragEnd = (result) => {
@@ -96,6 +104,48 @@ const BoardManager = () => {
     const updatedBoard = { ...allboard };
     updatedBoard.boards[updatedBoard.active].list = updatedLists;
     setAllBoard(updatedBoard);
+  };
+
+  // Function to handle task updates
+  // const handleTaskUpdate = (updatedTask) => {
+  //   console.log("handleTaskUpdate :: updatedTask ==> ", updatedTask);
+  //   const updatedLists = [...activeBoard.list];
+
+  //   updatedBoard.boards[updatedBoard.active].list = (updatedLists) =>
+  //     updatedLists.map((task) =>
+  //       task.id === updatedTask.id ? updatedTask : task
+  //     );
+  //   setIsPopupOpen(false); // Close the popup
+  // };
+
+  const handleTaskUpdate = (updatedTask) => {
+    console.log("handleTaskUpdate :: updatedTask ==> ", updatedTask);
+
+    // Update the task in the allboard state
+    setAllBoard((prevBoard) => {
+      const updatedLists = prevBoard.boards[prevBoard.active].list.map(
+        (list) => {
+          return {
+            ...list,
+            items: list.items.map((item) =>
+              item.id === updatedTask.id ? updatedTask : item
+            ),
+          };
+        }
+      );
+
+      return {
+        ...prevBoard,
+        boards: [
+          {
+            ...prevBoard.boards[prevBoard.active],
+            list: updatedLists,
+          },
+        ],
+      };
+    });
+
+    setIsPopupOpen(false); // Close the popup
   };
 
   return (
@@ -160,10 +210,16 @@ const BoardManager = () => {
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
                                   >
-                                    <div className="bg-purple-500 item flex justify-between items-center bg-zinc-700 p-1 cursor-pointer rounded-md border-2 border-zinc-900 hover:border-gray-500">
+                                    <div className="bg-purple-500 item flex justify-between items-center  p-1 cursor-pointer rounded-md border-2 border-zinc-900 hover:border-gray-500">
                                       <span>{item.title}</span>
                                       <span className="flex justify-start items-start">
-                                        <button className="hover:bg-gray-600 p-1 rounded-sm">
+                                        <button
+                                          className="hover:bg-gray-600 p-1 rounded-sm"
+                                          onClick={() => {
+                                            setSelectedTask(item); // Set the selected task
+                                            setIsPopupOpen(true); // Open the popup
+                                          }}
+                                        >
                                           <Edit2 size={16} />
                                         </button>
                                       </span>
@@ -189,6 +245,14 @@ const BoardManager = () => {
           <AddList getlist={addList} />
         </div>
       </div>
+      {isPopupOpen && (
+        <TaskDetail
+          task={selectedTask}
+          onClose={() => setIsPopupOpen(false)} // Close the popup
+          onEdit={true}
+          onUpdate={handleTaskUpdate} // Pass the update handler
+        />
+      )}
     </div>
   );
 };
