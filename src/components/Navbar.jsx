@@ -7,6 +7,7 @@ function Navbar() {
     <nav className="bg-purple-700 text-white px-6 py-4 flex justify-between items-center">
       {/* Logo Section */}
       <div className="flex items-center space-x-3">
+
         <Link to="/">
           <img
             src="src/assets/logo2.png"
@@ -14,6 +15,7 @@ function Navbar() {
             className="w-28 h-auto cursor-pointer" // Added cursor-pointer for better UX
           />
         </Link>
+
       </div>
 
       {/* Navigation Links */}
@@ -43,7 +45,7 @@ function Navbar() {
         {/* Always show User Icon on Home page */}
         {location.pathname === "/home" && (
           <div className="flex items-center space-x-4">
-            <span className="text-sm font-medium text-yellow-500">𝓐𝔂𝓪𝓽</span>
+            <span className="font-medium text-yellow-500 font-bold">𝓐𝔂𝓪𝓽</span>
             <img
               className="w-8 h-8 rounded-full border border-gray-400"
               src="https://placehold.co/28x28/png"
