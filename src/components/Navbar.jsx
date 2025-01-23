@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // 𝐻𝒾𝓋𝑒 𝐵𝑜𝒶𝓇𝒹
 
 function Navbar() {
   const location = useLocation(); // Get current location to determine if we are on the home page
@@ -7,24 +7,37 @@ function Navbar() {
     <nav className="bg-purple-700 text-white px-6 py-4 flex justify-between items-center">
       {/* Logo Section */}
       <div className="flex items-center space-x-3">
-        <img src="src/assets/logo.png" alt="App Logo" className="w-10 auto" />
-        <span className="text-2xl  font-semibold text-yellow-500">
-          𝐻𝒾𝓋𝑒 𝐵𝑜𝒶𝓇𝒹
-        </span>
+        <Link to="/">
+          <img
+            src="src/assets/logo2.png"
+            alt="App Logo"
+            className="w-28 h-auto cursor-pointer" // Added cursor-pointer for better UX
+          />
+        </Link>
       </div>
 
       {/* Navigation Links */}
       <ul className="flex items-center space-x-6">
         {/* Conditionally render Home link */}
         {location.pathname !== "/home" && (
-          <li>
-            <Link
-              to="/home"
-              className="text-xl font-medium hover:text-blue-400 transition text-yellow-500"
-            >
-              卄ⓞ𝓜ε
-            </Link>
-          </li>
+          <>
+            <li>
+              <Link
+                to="/about"
+                className="text-xl font-semibold tracking-wide hover:underline text-yellow-400"
+              >
+                𝐴𝒷𝑜𝓊𝓉
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/home"
+                className="text-xl font-semibold tracking-wide hover:underline text-yellow-400"
+              >
+                𝑀𝓎 𝐻𝒾𝓋𝑒
+              </Link>
+            </li>
+          </>
         )}
 
         {/* Always show User Icon on Home page */}

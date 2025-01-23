@@ -7,6 +7,7 @@ import Footer from "./components/Footer.jsx";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 import BoardManager from "./components/BoardManager.jsx";
 import Header from "./components/Header.jsx";
+import AboutPage from "./pages/AboutPage.jsx"
 function App() {
   return (
     <>
@@ -15,8 +16,10 @@ function App() {
 
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="home" element={<HomePage />} />
           <Route path="*" element={<ErrorPage />} />
+          
         </Routes>
         <Footer />
       </div>

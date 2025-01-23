@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HiveBoardLandingPage = () => {
   return (
@@ -16,18 +17,20 @@ const HiveBoardLandingPage = () => {
               and achieve your goals. Your ideas deserve the Hive treatment.
             </p>
             <div className="flex justify-center flex-wrap gap-6">
-              <button
-                type="button"
-                className="btn btn-yellow hover:bg-hive-darkyellow"
+              {/* Get Started Button */}
+              <Link
+                to="/home"
+                className="btn btn-yellow hover:bg-hive-darkyellow border border-yellow-500 py-3 px-6 rounded-md text-lg font-bold"
               >
                 Get Started
-              </button>
-              <button
-                type="button"
-                className="btn btn-outline hover:text-hive-yellow hover:border-hive-yellow"
+              </Link>
+              {/* Learn More Button */}
+              <Link
+                to="/about"
+                className="btn btn-outline hover:text-hive-yellow hover:border-hive-yellow border border-gray-400 py-3 px-6 rounded-md text-lg font-bold"
               >
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
           {/* Hero Image */}
@@ -69,12 +72,12 @@ const HiveBoardLandingPage = () => {
                 Create, categorize, and prioritize tasks with ease. HiveBoard
                 adapts to your workflow.
               </p>
-              <button
-                type="button"
-                className="mt-6 btn btn-yellow hover:bg-hive-darkyellow"
+              <Link
+                to="/about"
+                className="mt-6 btn btn-yellow hover:bg-hive-darkyellow border border-yellow-500 py-3 px-6 rounded-md text-lg font-bold"
               >
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
           {/* Feature 2 */}
@@ -92,12 +95,12 @@ const HiveBoardLandingPage = () => {
                 Work with your team like never before. Share updates, assign
                 tasks, and see progress live.
               </p>
-              <button
-                type="button"
-                className="mt-6 btn btn-yellow hover:bg-hive-darkyellow"
+              <Link
+                to="/about"
+                className="mt-6 btn btn-yellow hover:bg-hive-darkyellow border border-yellow-500 py-3 px-6 rounded-md text-lg font-bold"
               >
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
