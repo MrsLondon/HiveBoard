@@ -6,6 +6,8 @@ import AddList from "./AddList";
 import Utils from "../utils/Utils";
 import kanbanData from "../kanban.json";
 import TaskDetail from "./TaskDetail";
+import { BoardContext } from "../context/BoardContext";
+
 
 const BoardManager = () => {
   // Initialize board state with categorized lists

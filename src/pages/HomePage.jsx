@@ -4,7 +4,6 @@ import HomeSidebar from "../components/HomeSidebar";
 import BoardManager from "../components/BoardManager";
 import { BoardContext } from "../context/BoardContext";
 import kanabanDate from "../kanban.json";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 //this part
 const Home = () => {

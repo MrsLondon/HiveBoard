@@ -32,6 +32,7 @@ const HomeSidebar = () => {
     setShowpop(!showpop);
   };
   return (
+    
     <div
       className={`bg-purple-300 border-r border-r-[rgba(73,117,139,0.16)] transition-all linear duration-500 flex-shrink-0 ${
         collapsed ? "w-[42px]" : "w-[280px]"
