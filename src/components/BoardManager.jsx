@@ -106,17 +106,6 @@ const BoardManager = () => {
     setAllBoard(updatedBoard);
   };
 
-  // Function to handle task updates
-  // const handleTaskUpdate = (updatedTask) => {
-  //   console.log("handleTaskUpdate :: updatedTask ==> ", updatedTask);
-  //   const updatedLists = [...activeBoard.list];
-
-  //   updatedBoard.boards[updatedBoard.active].list = (updatedLists) =>
-  //     updatedLists.map((task) =>
-  //       task.id === updatedTask.id ? updatedTask : task
-  //     );
-  //   setIsPopupOpen(false); // Close the popup
-  // };
 
   const handleTaskUpdate = (updatedTask) => {
     console.log("handleTaskUpdate :: updatedTask ==> ", updatedTask);
@@ -148,6 +137,29 @@ const BoardManager = () => {
     setIsPopupOpen(false); // Close the popup
   };
 
+  const handleTaskDelete = (updatedTask) => {
+    setAllBoard((prevBoard) => {
+      const updatedLists = prevBoard.boards[prevBoard.active].list.map(
+        (list) => ({
+          ...list,
+          items: list.items.filter((item) => item.id !== updatedTask.id),
+        })
+      );
+  
+      return {
+        ...prevBoard,
+        boards: [
+          {
+            ...prevBoard.boards[prevBoard.active],
+            list: updatedLists,
+          },
+        ],
+      };
+    });
+  
+    setIsPopupOpen(false); // Close the popup after deletion
+  };
+  
   return (
     <div
       className="flex flex-col w-full"
@@ -251,10 +263,11 @@ const BoardManager = () => {
           onClose={() => setIsPopupOpen(false)} // Close the popup
           onEdit={true}
           onUpdate={handleTaskUpdate} // Pass the update handler
+          onDelete={handleTaskDelete} 
         />
       )}
     </div>
   );
-};
+}; 
 
 export default BoardManager;

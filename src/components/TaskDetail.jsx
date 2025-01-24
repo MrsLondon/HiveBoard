@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TaskDetail = ({ task, onClose, onEdit, onUpdate }) => {
+const TaskDetail = ({ task, onClose, onEdit, onUpdate, onDelete }) => {
   const [editMode, setEditMode] = useState(onEdit); // Toggle between view/edit mode
   const [updatedTask, setUpdatedTask] = useState(task); // Local state for task editing
   const [popupVisible, setPopupVisible] = useState(false);
@@ -12,13 +12,13 @@ const TaskDetail = ({ task, onClose, onEdit, onUpdate }) => {
     setEditMode(false);
     onUpdate(updatedTask);
     onClose();
-    alert("Task updated successfully!");
   };
 
-  //   const handleDelete = () => {
-  //     setPopupVisible(false);
-  //     alert("Task deleted successfully!");
-  //   };
+  const handleDelete = () => {
+    onDelete(updatedTask); // Notify the parent about the deletion
+    onClose(); // Close the popup
+  };
+
   console.log("task  :: ", task);
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50">
@@ -161,6 +161,12 @@ const TaskDetail = ({ task, onClose, onEdit, onUpdate }) => {
               >
                 Save
               </button>
+              <button
+                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                onClick={handleDelete}
+              >
+                Delete
+              </button>
             </>
           ) : (
             <>
@@ -170,12 +176,8 @@ const TaskDetail = ({ task, onClose, onEdit, onUpdate }) => {
               >
                 Edit
               </button>
-              <button
-                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-                // onClick={onDelete}
-              >
-                Delete
-              </button>
+          
+             
             </>
           )}
         </div>
