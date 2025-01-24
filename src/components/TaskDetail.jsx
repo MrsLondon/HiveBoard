@@ -112,7 +112,7 @@ const TaskDetail = ({ task, onClose, onEdit, onUpdate, onDelete }) => {
                 Creation Date
               </label>
               <input
-                type="text"
+                type="date"
                 value={updatedTask.createdDate}
                 onChange={(e) =>
                   setUpdatedTask({
@@ -128,7 +128,7 @@ const TaskDetail = ({ task, onClose, onEdit, onUpdate, onDelete }) => {
                 Due Date
               </label>
               <input
-                type="text"
+                type="date"
                 value={updatedTask.dueDate}
                 onChange={(e) =>
                   setUpdatedTask({ ...updatedTask, dueDate: e.target.value })
@@ -176,8 +176,6 @@ const TaskDetail = ({ task, onClose, onEdit, onUpdate, onDelete }) => {
               >
                 Edit
               </button>
-          
-             
             </>
           )}
         </div>

@@ -67,7 +67,7 @@ const HomeSidebar = () => {
                 align="start"
                 positions={["right", "top", "bottom", "left"]} // preferred positions by priority
                 content={
-                  <div className="ml-2 p-2 w-60 flex flex-col justify-center items-center bg-slate-600 text-white rounded bg-purple-500">
+                  <div className="ml-2 p-2 w-60 flex flex-col justify-center items-center text-white rounded bg-purple-500">
                     <button
                       onClick={() => setShowpop(!showpop)}
                       className="absolute right-2 top-2 hover:bg-gray-500 p-1 rounded"
@@ -102,7 +102,7 @@ const HomeSidebar = () => {
                       />
                       <button
                         onClick={() => addBoard()}
-                        className="bg-purple-300 w-full rounded h-8 bg-slate-700 mt-2 hover:bg-gray-500"
+                        className="bg-purple-300 w-full rounded h-8 mt-2 hover:bg-gray-500"
                       >
                         Create
                       </button>
