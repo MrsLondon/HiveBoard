@@ -8,8 +8,6 @@ import kanbanData from "../kanban.json";
 import TaskDetail from "./TaskDetail";
 
 const BoardManager = () => {
-  // Your task data (you might import this from a JSON file)
-
   // Initialize board state with categorized lists
   const [allboard, setAllBoard] = useState(() => {
     const categorizedLists = {
@@ -59,6 +57,7 @@ const BoardManager = () => {
   const activeBoard = allboard.boards[allboard.active];
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
+  const [editMode, setEditMode] = useState(false);
 
   // Handles the drag-and-drop functionality
   const handleDragEnd = (result) => {
@@ -106,7 +105,6 @@ const BoardManager = () => {
     setAllBoard(updatedBoard);
   };
 
-
   const handleTaskUpdate = (updatedTask) => {
     console.log("handleTaskUpdate :: updatedTask ==> ", updatedTask);
 
@@ -145,7 +143,7 @@ const BoardManager = () => {
           items: list.items.filter((item) => item.id !== updatedTask.id),
         })
       );
-  
+
       return {
         ...prevBoard,
         boards: [
@@ -156,10 +154,10 @@ const BoardManager = () => {
         ],
       };
     });
-  
+
     setIsPopupOpen(false); // Close the popup after deletion
   };
-  
+
   return (
     <div
       className="flex flex-col w-full"
@@ -223,13 +221,22 @@ const BoardManager = () => {
                                     {...provided.dragHandleProps}
                                   >
                                     <div className="bg-purple-500 item flex justify-between items-center  p-1 cursor-pointer rounded-md border-2 border-zinc-900 hover:border-gray-500">
-                                      <span>{item.title}</span>
+                                      <span
+                                        onClick={() => {
+                                          setSelectedTask(item);
+                                          setIsPopupOpen(true);
+                                          setEditMode(false);
+                                        }}
+                                      >
+                                        {item.title}
+                                      </span>
                                       <span className="flex justify-start items-start">
                                         <button
                                           className="hover:bg-gray-600 p-1 rounded-sm"
                                           onClick={() => {
                                             setSelectedTask(item); // Set the selected task
                                             setIsPopupOpen(true); // Open the popup
+                                            setEditMode(true);
                                           }}
                                         >
                                           <Edit2 size={16} />
@@ -261,13 +268,13 @@ const BoardManager = () => {
         <TaskDetail
           task={selectedTask}
           onClose={() => setIsPopupOpen(false)} // Close the popup
-          onEdit={true}
+          onEdit={editMode}
           onUpdate={handleTaskUpdate} // Pass the update handler
-          onDelete={handleTaskDelete} 
+          onDelete={handleTaskDelete}
         />
       )}
     </div>
   );
-}; 
+};
 
 export default BoardManager;
