@@ -11,7 +11,7 @@ import AboutPage from "./pages/AboutPage.jsx";
 function App() {
   return (
     <>
-      <div>
+      <div className="overflow-hidden">
         <Navbar />
 
         <Routes>

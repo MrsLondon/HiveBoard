@@ -45,9 +45,8 @@ function Navbar() {
           <div className="flex items-center space-x-4">
             <span className="font-medium text-yellow-500 font-bold">𝓐𝔂𝓪𝓽</span>
             <img
-              className="w-8 h-8 rounded-full border border-gray-400"
-              src="https://placehold.co/28x28/png"
-              alt="User Avatar"
+              className="w-10 h-10 rounded-full border border-gray-400 object-cover"
+              src="src/assets/biene_Maja.png"
             />
           </div>
         )}
