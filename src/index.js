@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline"; // Optional: Normalizes styles
@@ -9,7 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <CssBaseline /> {/* Optional: Adds baseline styles */}
+      <CssBaseline /> {/* Optional: Adds baseline styles }
       <BrowserRouter>
           <App />
       </BrowserRouter>
@@ -34,3 +34,4 @@ const theme = createTheme({
     fontFamily: "Roboto, Arial, sans-serif", // Custom font
   },
 });
+*/

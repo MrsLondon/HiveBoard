@@ -8,9 +8,10 @@ import kanbanData from "../kanban.json";
 import TaskDetail from "./TaskDetail";
 import { BoardContext } from "../context/BoardContext";
 
-
+  
 const BoardManager = () => {
   // Initialize board state with categorized lists
+  
   const [allboard, setAllBoard] = useState(() => {
     const categorizedLists = {
       "To Do": [],

@@ -9,7 +9,7 @@ function Navbar() {
       <div className="flex items-center space-x-3">
         <Link to="/">
           <img
-            src="src/assets/logo2.png"
+            src="/logo2.png"
             alt="App Logo"
             className="w-35 h-20 cursor-pointer" // Added cursor-pointer for better UX
           />
@@ -46,7 +46,7 @@ function Navbar() {
             <span className="font-medium text-yellow-500 font-bold">𝓐𝔂𝓪𝓽</span>
             <img
               className="w-10 h-10 rounded-full border border-gray-400 object-cover"
-              src="src/assets/biene_Maja.png"
+              src="/biene_Maja.png"
             />
           </div>
         )}

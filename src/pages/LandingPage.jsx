@@ -37,7 +37,7 @@ const LandingPage = () => {
           <div className="flex justify-center flex-1 mb-10 lg:mb-0 z-10">
             <img
               className="w-3/4 h-3/4 sm:w-3/4 sm:h-3/4 md:w-4/5  md:h-4/5  border-none"
-              src="src/assets/task2.gif"
+              src="/task2.gif"
               alt="HiveBoard Illustration"
             />
           </div>
